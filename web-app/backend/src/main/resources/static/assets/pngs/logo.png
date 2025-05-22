@@ -1,0 +1,42 @@
+// Exemplo de uma entidade
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String email;
+
+    // Getters e Setters
+}
+
+// Repositório
+public interface UserRepository extends JpaRepository<User, Long> {}
+
+// Serviço
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    // Outros métodos
+}
+
+// Controlador
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    @Autowired
+    private UserService userService;
+
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.findAll();
+    }
+
+    // Outros endpoints
+}
