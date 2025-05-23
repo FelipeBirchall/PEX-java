@@ -1,4 +1,11 @@
+package com.example.model;
+
+import jakarta.persistence.*;
+
+@Entity
 public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
@@ -6,8 +13,7 @@ public class Usuario {
     private String matricula;
     private String tipo;
 
-    public Usuario() {
-    }
+    public Usuario() {}
 
     public Usuario(Long id, String nome, String email, String senha, String matricula, String tipo) {
         this.id = id;

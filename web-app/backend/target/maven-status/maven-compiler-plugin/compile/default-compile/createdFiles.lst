@@ -1,0 +1,17 @@
+com\example\controller\TarefaController.class
+com\example\controller\AuthController.class
+com\example\repository\TarefaRepository.class
+com\example\Application.class
+com\example\controller\InscricaoController.class
+com\example\repository\ProjetoRepository.class
+com\example\controller\ProjetoController.class
+com\example\controller\ProjetoController$ProjetoDetalhes.class
+com\example\model\Projeto.class
+com\example\model\Inscricao.class
+com\example\model\Notificacao.class
+com\example\controller\NotificacaoController.class
+com\example\repository\NotificacaoRepository.class
+com\example\repository\InscricaoRepository.class
+com\example\model\Tarefa.class
+com\example\model\Usuario.class
+com\example\repository\UsuarioRepository.class
